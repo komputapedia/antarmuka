@@ -1,9 +1,11 @@
+![komputapedia logo](/static/favicon.png)
+
 # Komputapedia (Antarmuka)
 
 Sebuah inisiatif untuk menyediakan ensiklopedia ilmu komputasi berbahasa Indonesia yang terbuka dan gotong royong.
 Proyek ini bertujuan untuk mendemokratisasi wawasan dan menyusun bacaan umum tentang ilmu komputasi.
 
-## Cara menjalankan kode ini
+## 🚀 Cara menjalankan kode ini
 
 Kode ini sebagian besar didominasi oleh bahasa Svelte yang bergantung pada ekosistem javascript, maka perlu menginstall
 runtime javascript seperti Node JS dan install paket manajer pnpm.
@@ -12,14 +14,14 @@ runtime javascript seperti Node JS dan install paket manajer pnpm.
 2. Lalu jalankan perintah `pnpm install` pada konsole yang berlokasi didalam folder hasil klon.
 3. Setelah pemasangan ketergantungan selesai, jalankan `pnpm dev` untuk menjalankan situs dalam mode pengembang.
 
-## Kontribusi
+## 🔰 Kontribusi
 
 Panduan sedang dalam proses pembuatan.
 
-## Kode etik perilaku (_Code of Conduct_)
+## 🤝 Kode etik perilaku (_Code of Conduct_)
 
-Peraturan sedang dalam proses adaptasi.
+[Ikrar Kode Etik Kontributor](./CODE_OF_CONDUCT.md)
 
-## Lisensi
+## 🪪 Lisensi
 
 Kode sumber komputapedia terikat dalam lisensi GNU GPL versi 3.

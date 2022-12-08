@@ -1,3 +1,4 @@
+<!-- SPDX-License-Identifier: GPL-3.0-only -->
 <script>
 	export let data;
 	import { onMount } from 'svelte';

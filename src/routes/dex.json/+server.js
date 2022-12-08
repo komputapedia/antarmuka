@@ -1,4 +1,4 @@
-import { error } from '@sveltejs/kit';
+// SPDX-License-Identifier: GPL-3.0-only
 
 /** @type {import('./$types').RequestHandler} */
 export const GET = async ({ url }) => {
