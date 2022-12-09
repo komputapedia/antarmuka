@@ -2,7 +2,7 @@
 <script>
 	export let data;
 	import { onMount } from 'svelte';
-	import { Divider, Text, Space, Stack, Container } from '@svelteuidev/core';
+	import { Divider, Text, Space, Stack, Container, Anchor } from '@svelteuidev/core';
 
 	let result = [];
 	let isLoading = true;
@@ -26,10 +26,12 @@
 				<Space h={3} />
 				{#if result.length > 0}
 					{#each result as r}
-						<Text>
-							{r.judul}
-						</Text>
-						<Divider />
+						<Anchor href={"/indeks/" + r.slug}>
+							<Text>
+								{r.judul}
+							</Text>
+							<Divider />
+						</Anchor>
 					{/each}
 				{:else}
 					<Text color="red">Pencarian tidak menemukan hasil yang sesuai</Text>

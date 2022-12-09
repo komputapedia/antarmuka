@@ -7,10 +7,16 @@
 	export let data;
 </script>
 
+<style>
+	.ensiklopedia h1, h2, h3 {
+		font-family: 'Space Grotesk', sans-serif;
+	}
+</style>
+
 <Container>
 	<Grid cols={24}>
 		<Grid.Col sm={16} xs={24}>
-			<TypographyProvider>
+			<TypographyProvider className="ensiklopedia">
 				<h1>{data.judul}</h1>
 				<!-- <p>Published: {data.date}</p> -->
 				<svelte:component this={data.content} />

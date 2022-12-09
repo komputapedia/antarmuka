@@ -9,6 +9,9 @@
 		Group,
 		Anchor
 	} from '@svelteuidev/core';
+
+	import "@fontsource/space-grotesk/700.css";
+	import "@fontsource/space-grotesk";
 </script>
 
 <SvelteUIProvider themeObserver="light">
