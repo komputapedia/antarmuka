@@ -16,10 +16,10 @@
 
 	let kru = [
 		{
-			nama: 'Yoghaswara',
-			bio: '2x year-old game developer, software artist and gardener',
-			role: ['Inisiator', 'Programmer'],
-			link: 'https://github.com/edelsora',
+			nama: 'Yoghaswara HN',
+			bio: 'Seorang pengerajin perangkat lunak, pecatan mahasiswa dan wibu berumur 2x tahun.',
+			role: ['Inisiator'],
+			link: 'https://edelsora.github.io',
 			photo: 'https://avatars.githubusercontent.com/u/100399407?v=4'
 		}
 	];
@@ -51,9 +51,9 @@
 							</Card.Section>
 							<Card.Section>
 								<Space h={'sm'} />
-								<Text weight={'semibold'} size="xl" align="center">{k.nama}</Text>
+								<Text weight={'semibold'} size="xl" align="center" mx={6}>{k.nama}</Text>
 								<Space h={'xl'} />
-								<Text align="center" inline={false}>{k.bio}</Text>
+								<Text align="center" inline={false} mx={6}>{k.bio}</Text>
 								<Space h={'xl'} />
 								<Group position="center">
 									{#each k.role as role}
