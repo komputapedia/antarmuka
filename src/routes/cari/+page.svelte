@@ -1,11 +1,5 @@
 <script>
-    import {
-        Container,
-        Text,
-        Space
-    } from '@svelteuidev/core';
+	import { Container, Text, Space } from '@svelteuidev/core';
 </script>
 
-<Container>
-
-</Container>
+<Container />

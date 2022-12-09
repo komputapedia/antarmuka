@@ -21,11 +21,11 @@
 
 	let popularList = [
 		{
-			judul: 'Algoritme', 
+			judul: 'Algoritme',
 			slug: 'algoritme'
 		},
 		{
-			judul: 'Kalkulus Lambda', 
+			judul: 'Kalkulus Lambda',
 			slug: 'kalkulus lambda'
 		},
 		{
@@ -44,50 +44,43 @@
 
 	const closeContribGuide = () => {
 		openContribGuide = false;
-	}
+	};
 
 	import { goto } from '$app/navigation';
 	const theme = useSvelteUITheme();
 
+	const getEnsiklopediaContributorList = () => {
+		fetch('https://api.github.com/repos/komputapedia/ensiklopedia/contributors?anon=1')
+			.then((res) => res.json())
+			.then((v) => {
+				contributorList = v.map((e) => {
+					return {
+						avatar: e.avatar_url,
+						profile: e.html_url
+					};
+				});
+			});
+	};
 
-	const getEnsiklopediaContributorList= () => {
-		fetch("https://api.github.com/repos/komputapedia/ensiklopedia/contributors?anon=1")
-		.then((res)=> res.json())
-		.then((v) => {
-			contributorList = v.map((e) => {
-				return {
-					avatar: e.avatar_url, 
-					profile: e.html_url
-				}
-			})
-		})
-	}
-
-	onMount(()=>{
+	onMount(() => {
 		getEnsiklopediaContributorList();
-	})
+	});
 </script>
 
-<Modal 
-	opened={openContribGuide} 
-	on:close={closeContribGuide} title="Pindah halaman"
+<Modal
+	opened={openContribGuide}
+	on:close={closeContribGuide}
+	title="Pindah halaman"
 	overlayColor={theme.colorScheme === 'dark' ? theme.colors.dark900 : theme.colors.gray200}
-    overlayOpacity={0.55}
-    overlayBlur={3}
-	>
-	<Text>Kamu akan dipindahkan ke alamat : <b>https://github.com/komputapedia/ensiklopedia</b> </Text>
+	overlayOpacity={0.55}
+	overlayBlur={3}
+>
+	<Text>Kamu akan dipindahkan ke alamat : <b>https://github.com/komputapedia/ensiklopedia</b></Text>
 	<Stack py="xl">
-		<Button 
-			variant="light"
-			href="https://github.com/komputapedia/ensiklopedia"
-			
-			>
+		<Button variant="light" href="https://github.com/komputapedia/ensiklopedia">
 			<b>Lanjutkan</b>
 		</Button>
-		<Button
-			variant="gradient"
-			href="/cara-kontribusi"
-			>
+		<Button variant="gradient" href="/cara-kontribusi">
 			<b>Bagaimana caranya ikut berkontribusi?</b>
 		</Button>
 	</Stack>
@@ -106,9 +99,8 @@
 					color="dark"
 					lineClamp={2}
 					inline={false}
-					override={{ fontSize: '2em', lineHeight: '1.5', fontFamily: "Space Grotesk" }}
+					override={{ fontSize: '2em', lineHeight: '1.5', fontFamily: 'Space Grotesk' }}
 					root="p"
-
 				>
 					Ensiklopedia Ilmu Komputasi
 					<br /> Terbuka Bahasa Indonesia
@@ -146,29 +138,29 @@
 					</InputWrapper>
 				</section>
 				<Group align="center" override={{ 'justify-content': 'center' }}>
-					<Button 
-						override={{ margin: '1em' }} 
-						mx="auto" 
-						variant="gradient" 
-						size="md" 
+					<Button
+						override={{ margin: '1em' }}
+						mx="auto"
+						variant="gradient"
+						size="md"
 						ripple={true}
 						loading={searching}
-						on:click={()=>{
+						on:click={() => {
 							searching = true;
 							goto('/cari/' + searchField);
 						}}
-						>
+					>
 						<MagnifyingGlass size={16} slot="leftIcon" />
 						<b> Cari</b>
 					</Button>
-					<Button 
-						override={{ margin: '1em' }} 
-						mx="auto" 
-						variant="light" 
-						size="md" 
+					<Button
+						override={{ margin: '1em' }}
+						mx="auto"
+						variant="light"
+						size="md"
 						ripple
 						on:click={() => (openContribGuide = true)}
-						>
+					>
 						<b> Buat Kontribusi</b>
 					</Button>
 				</Group>
@@ -181,14 +173,17 @@
 		<Stack>
 			<Space h={11} />
 			<Text weight="bold" size="xl" root="h2">
-				<Star mx={3} /> Pencarian Populer</Text>
+				<Star mx={3} /> Pencarian Populer</Text
+			>
 			<Space h={6} />
 			{#if popularList.length == 0}
 				<Text size="xl" weight="semibold" root="">Belum ada yang populer sejauh ini.</Text>
 			{:else}
 				{#each popularList as p}
-					<Anchor href={"/indeks/" + p.slug} override={{ 'text-decoration': 'none !important' }}>
-						<Text size="xl" weight="medium" root="" override={{ fontFamily: 'Space Grotesk' }}>{p.judul}</Text>
+					<Anchor href={'/indeks/' + p.slug} override={{ 'text-decoration': 'none !important' }}>
+						<Text size="xl" weight="medium" root="" override={{ fontFamily: 'Space Grotesk' }}
+							>{p.judul}</Text
+						>
 						<Divider />
 					</Anchor>
 				{/each}
@@ -198,23 +193,22 @@
 	<!-- FAQ-->
 	<Container>
 		<Space h={11} />
-		<Text weight="bold" size="xl" root="h2"> 
-			<Avatar mx={3}/>
-			Kontributor {
-			contributorList.length == 0 ? 
-			"" : contributorList.length < 50 ?
-				"(" + contributorList.length + ")"
-				: "(50+)"
-			}
-			</Text>
+		<Text weight="bold" size="xl" root="h2">
+			<Avatar mx={3} />
+			Kontributor {contributorList.length == 0
+				? ''
+				: contributorList.length < 50
+				? '(' + contributorList.length + ')'
+				: '(50+)'}
+		</Text>
 		<Space h={6} />
 		{#if contributorList.length == 0}
 			<Text>Sedang memuat daftar kontributor</Text>
 		{:else}
 			<Group>
 				{#each contributorList as contributor}
-					<Anchor href={contributor.profile} >
-						<Image  src={contributor.avatar} width={50} radius="sm" />
+					<Anchor href={contributor.profile}>
+						<Image src={contributor.avatar} width={50} radius="sm" />
 					</Anchor>
 				{/each}
 			</Group>

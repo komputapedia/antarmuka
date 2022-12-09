@@ -17,24 +17,24 @@ terbuka, ramah, inklusif, dan sehat.
 Contoh perilaku yang berkontribusi memberi dampak yang positif dalam
 komunitas kami meliputi:
 
-* Menunjukkan rasa empati dan kebaikan kepada orang lain
-* Menghormati opini, pandangan, dan pengalaman yang berbeda
-* Memberikan dan menerima secara sopan umpan balik yang konstruktif
-* Menerima tanggung jawab dan meminta maaf kepada yang terdampak dari kesalahan
+- Menunjukkan rasa empati dan kebaikan kepada orang lain
+- Menghormati opini, pandangan, dan pengalaman yang berbeda
+- Memberikan dan menerima secara sopan umpan balik yang konstruktif
+- Menerima tanggung jawab dan meminta maaf kepada yang terdampak dari kesalahan
   kita, dan belajar dari pengalaman
-* Fokus terhadap apa yang terbaik tidak hanya untuk diri pribadi, tetapi untuk
+- Fokus terhadap apa yang terbaik tidak hanya untuk diri pribadi, tetapi untuk
   keseluruhan komunitas
 
 Contoh perilaku yang tidak dapat diterima meliputi:
 
-* Penggunaan bahasa atau citra seksual, dan sorotan bernada seksual atau rayuan 
+- Penggunaan bahasa atau citra seksual, dan sorotan bernada seksual atau rayuan
   dalam bentuk apapun
-* Mengejek, mencaci maki atau komentar yang menghina / merendahkan, dan serangan terhadap
+- Mengejek, mencaci maki atau komentar yang menghina / merendahkan, dan serangan terhadap
   individual atau politik
-* Pelecehan secara umum atau pribadi
-* Memuat informasi pribadi orang lain, seperti alamat fisik atau surel,
+- Pelecehan secara umum atau pribadi
+- Memuat informasi pribadi orang lain, seperti alamat fisik atau surel,
   tanpa persejutuan orang tersebut
-* Perilaku lainnya yang secara wajar dapat dianggap tidak sesuai dalam
+- Perilaku lainnya yang secara wajar dapat dianggap tidak sesuai dalam
   lingkungan profesional
 
 ## Tanggung Jawab Lingkungan
@@ -45,7 +45,7 @@ korektif yang tepat dan adil, dalam menanggapi setiap kasus perilaku yang diangg
 tidak dapat diterima, mengancam, ofensif, atau membahayakan.
 
 Pengelola komunitas mempunyai hak dan tanggung jawab untuk menghapus, mengubah,
-atau menolak komentar, *commit*, kode, suntingan wiki, isu, dan kontribusi lainnya
+atau menolak komentar, _commit_, kode, suntingan wiki, isu, dan kontribusi lainnya
 yang tidak sesuai dengan Kode Etik ini, dan akan mengomunikasikan alasan
 keputusan moderasi bila diperlukan.
 
@@ -88,7 +88,7 @@ tidak pantas. Permintaan maaf secara publik mungkin akan diminta.
 serangkaian tindakan.
 
 **Konsekuensi**: Peringatan serta konsekuensi bagi yang masih melanggar.
-Tidak ada interaksi dengan orang-orang yang terlibat, termasuk interaksi yang 
+Tidak ada interaksi dengan orang-orang yang terlibat, termasuk interaksi yang
 tidak diminta dengan mereka yang menegakkan Kode Etik ini, dalam tempo waktu yang
 telah ditentukan. Hal ini juga termasuk menghindari interaksi di ruang
 komunitas serta saluran lainnya seperti media sosial. Melanggar ketentuan ini

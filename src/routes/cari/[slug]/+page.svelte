@@ -26,7 +26,7 @@
 				<Space h={3} />
 				{#if result.length > 0}
 					{#each result as r}
-						<Anchor href={"/indeks/" + r.slug}>
+						<Anchor href={'/indeks/' + r.slug}>
 							<Text>
 								{r.judul}
 							</Text>
