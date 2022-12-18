@@ -7,7 +7,8 @@
 		Text,
 		Container,
 		Group,
-		Anchor
+		Anchor,
+		Badge
 	} from '@svelteuidev/core';
 
 	import '@fontsource/space-grotesk/700.css';
@@ -19,23 +20,28 @@
 		<Header slot="header" height="3em">
 			<Container>
 				<Group grow>
-					<Anchor href="/" override={{ 'text-decoration': 'none !important' }}>
-						<Text
-							weight="bold"
-							lineClamp={2}
-							size="xl"
-							override={{ lineHeight: '2', fontFamily: 'Space Grotesk, sans-serif' }}
-						>
+					<Group position="left" override={{"max-width": "100%"}}>
+						<Anchor href="/" override={{ 'text-decoration': 'none !important' }}>
 							<Text
-								inherit
-								root="span"
-								variant="gradient"
-								gradient={{ from: 'blue', to: 'cyan', deg: 8 }}
+								weight="bold"
+								lineClamp={2}
+								size="xl"
+								override={{ lineHeight: '2', fontFamily: 'Space Grotesk, sans-serif' }}
 							>
-								Komputa</Text
-							>pedia
-						</Text>
-					</Anchor>
+								<Text
+									inherit
+									root="span"
+									variant="gradient"
+									gradient={{ from: 'blue', to: 'cyan', deg: 8 }}
+								>
+									Komputa</Text
+								>pedia
+							</Text>
+						</Anchor>
+						<Badge color="red" size="sm" radius="sm" variant="dot">
+							Alpha
+						</Badge>
+					</Group>
 					<Group position="right">
 						<Anchor
 							href="/arah/"

@@ -23,14 +23,6 @@
 		{
 			judul: 'Algoritme',
 			slug: 'algoritme'
-		},
-		{
-			judul: 'Kalkulus Lambda',
-			slug: 'kalkulus lambda'
-		},
-		{
-			judul: 'Teori Bahasa dan Otomata',
-			slug: 'teori bahasa dan otomata'
 		}
 	];
 
@@ -85,6 +77,10 @@
 		</Button>
 	</Stack>
 </Modal>
+
+<svelte:head>
+	<title>Komputapedia - Ensiklopedia Ilmu Komputasi Berbahasa Indonesia</title>
+</svelte:head>
 
 <Container>
 	<!-- Hero -->

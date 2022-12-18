@@ -7,6 +7,10 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title> {data.judul} - Komputapedia</title>
+</svelte:head>
+
 <Container>
 	<Grid cols={24}>
 		<Grid.Col sm={16} xs={24}>

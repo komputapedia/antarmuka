@@ -25,6 +25,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Komputapedia.Kru</title>
+</svelte:head>
+
 <Container size="xs">
 	<TypographyProvider>
 		<h1>Kru</h1>

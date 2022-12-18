@@ -2,6 +2,10 @@
 	import { Container, Text, TypographyProvider } from '@svelteuidev/core';
 </script>
 
+<svelte:head>
+	<title>Cara Kontribusi - Komputapedia</title>
+</svelte:head>
+
 <Container size="xs">
 	<TypographyProvider>
 		<h1>Cara ikut berkontribusi</h1>
@@ -27,20 +31,7 @@
 		</ul>
 
 		<p>
-			Bila kamu ingin melakukan hal diatas, pastikan lihat issue serupa di tab Issue repositori
-			apakah ada sudah ada issue serupa dan bila ada tandanya sudah ada orang yang mengerjakan
-			kecuali issue tersebut hanya laporan semata.
-		</p>
-		<p>
-			Setelah kamu memastikan tidak ada issue serupa (bukan laporan), maka kamu membuat issue
-			terkait hal yang kamu ingin kontribusikan, melakukana fork dari repositori, buat branch khusus
-			kemudian memasukan kontribusi pada repositori hasil fork di akun kamu.
-		</p>
-		<p>
-			Bila sudah selesai menambahkan kontribusi pada repositori yang kamu fork, saatnya melakukan
-			<i>pull-request</i> atau tekan tombol <i>Contribe</i> saat kamu membuka repositori hasil fork,
-			kemudian minta reviu dari anggota lain supaya <i>pull-request</i> yang kamu buat diperiksa dan
-			disepakati.
+			Panduan selengkapnya untuk kontribusi entri ensiklopedia bisa kunjungi <a href="https://github.com/komputapedia/ensiklopedia/blob/main/CONTRIBUTE.md" alt="tautan panduan halaman kontribusi">halaman kontribusi</a>.
 		</p>
 
 		<p>
@@ -56,6 +47,10 @@
 				kode yang ada.
 			</li>
 		</ul>
+
+		<p>
+			<a href="https://github.com/komputapedia/antarmuka/">Repositori halaman antarmuka</a>.
+		</p>
 
 		<p>
 			Kontribusi secara moneter sedang tidak tersedia. Kontribusi semacam ini akan dimanfaatkan
