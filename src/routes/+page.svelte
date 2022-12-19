@@ -16,7 +16,7 @@
 		Modal,
 		useSvelteUITheme
 	} from '@svelteuidev/core';
-	import { MagnifyingGlass, Star, Avatar } from 'radix-icons-svelte';
+	import { Pencil1,MagnifyingGlass, Star, Avatar } from 'radix-icons-svelte';
 	import { onMount } from 'svelte';
 
 	let popularList = [
@@ -157,6 +157,7 @@
 						ripple
 						on:click={() => (openContribGuide = true)}
 					>
+						<Pencil1 size={16} slot="leftIcon" />
 						<b> Buat Kontribusi</b>
 					</Button>
 				</Group>

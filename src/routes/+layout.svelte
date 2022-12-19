@@ -17,6 +17,10 @@
 	import '@fontsource/space-grotesk';
 </script>
 
+<style>
+
+</style>
+
 <SvelteUIProvider themeObserver="light">
 	<AppShell>
 		<Header slot="header" height="3em">
@@ -63,6 +67,7 @@
 							href="https://github.com/komputapedia"
 							alt="repository github"
 							override={{ 'text-decoration': 'none !important' }}
+							class="github-logo"
 						>
 							<GithubLogo size={22} color="black" />
 						</Anchor>

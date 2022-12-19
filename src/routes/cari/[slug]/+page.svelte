@@ -25,8 +25,10 @@
 				
 				result = search.search(data.slug)
 			}
+		}).finally(()=>{
+			isLoading = false;
 		})
-		isLoading = false;
+		
 	});
 </script>
 
