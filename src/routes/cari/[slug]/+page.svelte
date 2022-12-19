@@ -3,15 +3,29 @@
 	export let data;
 	import { onMount } from 'svelte';
 	import { Divider, Text, Space, Stack, Container, Anchor } from '@svelteuidev/core';
+	import { searchStorable } from '../../../stores/searchIndex';
+	import Fuse from 'fuse.js'
 
 	let result = [];
 	let isLoading = true;
 
+
 	onMount(async () => {
-		const res = await fetch(`/dex.json`);
-		if (data.slug) {
-			result = (await res.json()).filter((e) => e.judul.toLowerCase() == data.slug.toLowerCase());
-		}
+		window.fetch(`/dex.json`)
+		.then(res => res.json())
+		.then(e => {
+			if (data.slug) {
+				const options = {
+					includeScore: true,
+					// Search in `author` and in `tags` array
+					keys: ['judul', 'sinonim']
+				}
+
+				const search = new Fuse(e, options)
+				
+				result = search.search(data.slug)
+			}
+		})
 		isLoading = false;
 	});
 </script>
@@ -26,9 +40,9 @@
 				<Space h={3} />
 				{#if result.length > 0}
 					{#each result as r}
-						<Anchor href={'/indeks/' + r.slug}>
+						<Anchor href={'/indeks/' + r.item.slug}>
 							<Text>
-								{r.judul}
+								{r.item.judul}
 							</Text>
 							<Divider />
 						</Anchor>

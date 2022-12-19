@@ -26,7 +26,7 @@
 		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
-		"vite": "^3.2.4"
+		"vite": "^4.0.0"
 	},
 	"type": "module",
 	"dependencies": {
@@ -34,6 +34,7 @@
 		"@svelteuidev/composables": "^0.7.6",
 		"@svelteuidev/core": "^0.7.6",
 		"@svelteuidev/motion": "^0.7.6",
+		"fuse.js": "^6.6.2",
 		"mdsvex": "^0.10.6",
 		"radix-icons-svelte": "^1.2.1"
 	}

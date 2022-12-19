@@ -11,6 +11,8 @@
 		Badge
 	} from '@svelteuidev/core';
 
+	import { GithubLogo } from 'radix-icons-svelte';
+
 	import '@fontsource/space-grotesk/700.css';
 	import '@fontsource/space-grotesk';
 </script>
@@ -56,6 +58,13 @@
 							override={{ 'text-decoration': 'none !important' }}
 						>
 							<Text weight="semibold" inline={false}>Kru</Text>
+						</Anchor>
+						<Anchor
+							href="https://github.com/komputapedia"
+							alt="repository github"
+							override={{ 'text-decoration': 'none !important' }}
+						>
+							<GithubLogo size={22} color="black" />
 						</Anchor>
 					</Group>
 				</Group>
