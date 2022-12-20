@@ -14,7 +14,7 @@
 		Anchor
 	} from '@svelteuidev/core';
 
-	import SEO from "../../components/seo.svelte";
+	import SEO from '../../components/seo.svelte';
 
 	let kru = [
 		{
@@ -27,12 +27,12 @@
 	];
 </script>
 
-<SEO 
+<SEO
 	title="Komputapedia.Kru"
 	description="Daftar pengurus inti dari komputapedia"
 	article={false}
 	author="Komputapedia"
-	keywords={["kru","ensiklopedia"]}
+	keywords={['kru', 'ensiklopedia']}
 />
 
 <Container size="xs">

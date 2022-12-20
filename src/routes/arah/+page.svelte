@@ -25,19 +25,19 @@
 
 		<p>
 			Alasan saya membuat Pokedex Ilmu Komputasi untuk melepaskan ilmu ini dari belenggu bangku
-			sekolah, maksud saya agar ilmu-ilmu semacam ini dapat dipelajari oleh khalayak umum tanpa harus mengeyam
-			bangku sekolah yang terlampau mahal, penuh gengsi dan berwatak konsumeristik.
+			sekolah, maksud saya agar ilmu-ilmu semacam ini dapat dipelajari oleh khalayak umum tanpa
+			harus mengeyam bangku sekolah yang terlampau mahal, penuh gengsi dan berwatak konsumeristik.
 		</p>
 
 		<p>
-			Saya tahu masyarakat kita lebih menghargai sebuah ijazah dan nilai rapor ketimbang
-			karya dan kecintaan akan wawasan. Meskipun begitu dalam situasi apa pun bila kita punya ilmu, 
-			mari kita bagikan dan gunakan sebijak mungkin.
+			Saya tahu masyarakat kita lebih menghargai sebuah ijazah dan nilai rapor ketimbang karya dan
+			kecintaan akan wawasan. Meskipun begitu dalam situasi apa pun bila kita punya ilmu, mari kita
+			bagikan dan gunakan sebijak mungkin.
 		</p>
 
 		<p>
-			Arah ini bukan sebuah ambisi, motivasi ataupun gengsi, tetapi sebuah inisiatif
-			tanpa harapan untuk berbagi kepada sesama dan bebahagia hati dengan sukarela.
+			Arah ini bukan sebuah ambisi, motivasi ataupun gengsi, tetapi sebuah inisiatif tanpa harapan
+			untuk berbagi kepada sesama dan bebahagia hati dengan sukarela.
 		</p>
 
 		Salam,

@@ -31,6 +31,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/space-grotesk": "^4.5.10",
+		"@sveltejs/adapter-vercel": "^1.0.0",
 		"@svelteuidev/composables": "^0.7.6",
 		"@svelteuidev/core": "^0.7.6",
 		"@svelteuidev/motion": "^0.7.6",

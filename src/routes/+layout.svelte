@@ -8,7 +8,8 @@
 		Container,
 		Group,
 		Anchor,
-		Badge
+		Badge,
+		Divider
 	} from '@svelteuidev/core';
 
 	import { GithubLogo } from 'radix-icons-svelte';
@@ -17,16 +18,12 @@
 	import '@fontsource/space-grotesk';
 </script>
 
-<style>
-
-</style>
-
 <SvelteUIProvider themeObserver="light">
 	<AppShell>
 		<Header slot="header" height="3em">
 			<Container>
 				<Group grow>
-					<Group position="left" override={{"max-width": "100%"}}>
+					<Group position="left" override={{ 'max-width': '100%' }}>
 						<Anchor href="/" override={{ 'text-decoration': 'none !important' }}>
 							<Text
 								weight="bold"
@@ -44,9 +41,7 @@
 								>pedia
 							</Text>
 						</Anchor>
-						<Badge color="red" size="sm" radius="sm" variant="dot">
-							Alpha
-						</Badge>
+						<Badge color="red" size="sm" radius="sm" variant="dot">Alpha</Badge>
 					</Group>
 					<Group position="right">
 						<Anchor
@@ -76,5 +71,18 @@
 			</Container>
 		</Header>
 		<slot />
+		<Container>
+			<Divider />
+			<Group>
+				<Anchor
+					color="dark"
+					href="/penafian"
+					override={{ 'text-decoration': 'none', margin: 'auto' }}>Penafian</Anchor
+				>
+			</Group>
+		</Container>
 	</AppShell>
 </SvelteUIProvider>
+
+<style>
+</style>

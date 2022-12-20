@@ -1,18 +1,19 @@
+<!-- SPDX-License-Identifier: GPL-3.0-only -->
 <script>
 	import { Container, Text, TypographyProvider } from '@svelteuidev/core';
-	import SEO from "../../components/seo.svelte";
+	import SEO from '../../components/seo.svelte';
 </script>
 
 <svelte:head>
 	<title>Cara Kontribusi - Komputapedia</title>
 </svelte:head>
 
-<SEO 
+<SEO
 	title="Cara Kontribusi - Komputapedia"
 	description="Cara ikut bergotong royong bersama Komputapedia"
 	article={false}
 	author="Komputapedia"
-	keywords={["kontribusi","ensiklopedia"]}
+	keywords={['kontribusi', 'ensiklopedia']}
 />
 
 <Container size="xs">
@@ -40,7 +41,10 @@
 		</ul>
 
 		<p>
-			Panduan selengkapnya untuk kontribusi entri ensiklopedia bisa kunjungi <a href="https://github.com/komputapedia/ensiklopedia/blob/main/CONTRIBUTE.md" alt="tautan panduan halaman kontribusi">halaman kontribusi</a>.
+			Panduan selengkapnya untuk kontribusi entri ensiklopedia bisa kunjungi <a
+				href="https://github.com/komputapedia/ensiklopedia/blob/main/CONTRIBUTE.md"
+				alt="tautan panduan halaman kontribusi">halaman kontribusi</a
+			>.
 		</p>
 
 		<p>

@@ -16,9 +16,9 @@
 		Modal,
 		useSvelteUITheme
 	} from '@svelteuidev/core';
-	import { Pencil1,MagnifyingGlass, Star, Avatar } from 'radix-icons-svelte';
+	import { Pencil1, MagnifyingGlass, Star, Avatar } from 'radix-icons-svelte';
 	import { onMount } from 'svelte';
-	import SEO from "../components/seo.svelte";
+	import SEO from '../components/seo.svelte';
 
 	let popularList = [
 		{
@@ -79,14 +79,13 @@
 	</Stack>
 </Modal>
 
-<SEO 
+<SEO
 	title="Komputapedia - Ensiklopedia Ilmu Komputasi Berbahasa Indonesia"
 	description="Ensiklopedia Ilmu Komputasi Berbahasa Indonesia"
 	article={false}
 	author="edelsora"
-	keywords={["algoritme","komputasi","ensiklopedia"]}
+	keywords={['algoritme', 'komputasi', 'ensiklopedia']}
 />
-
 
 <Container>
 	<!-- Hero -->

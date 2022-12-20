@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0-only
-import { getEncyclopedia } from "../../lib/get-encyclopedia";
+import { getEncyclopedia } from '../../lib/get-encyclopedia';
 
 export const GET = async function get() {
-    const headers = {
-      'Cache-Control': 'max-age=0, s-maxage=3600',
-      'Content-Type': 'application/xml',
-    }
+	const headers = {
+		'Cache-Control': 'max-age=0, s-maxage=3600',
+		'Content-Type': 'application/xml'
+	};
 
-    const encyclopedias = await getEncyclopedia();
-    const website = "https://komputapedia.web.id";
+	const encyclopedias = await getEncyclopedia();
+	const website = 'https://komputapedia.web.id';
 
-    let resMeta = {
-      headers,
-      body: `<?xml version="1.0" encoding="UTF-8" ?>
+	let resMeta = {
+		headers,
+		body: `<?xml version="1.0" encoding="UTF-8" ?>
       <urlset
         xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
@@ -27,18 +27,19 @@ export const GET = async function get() {
       <priority>0.7</priority>
     </url>
     ${encyclopedias
-      .map(post =>
-        `
+			.map(
+				(post) =>
+					`
     <url>
       <loc>${website}/indeks/${post.slug}</loc>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
     </url>
     `
-      )
-      .join('')}
-      </urlset>`,
-    }
+			)
+			.join('')}
+      </urlset>`
+	};
 
-    return new Response(resMeta.body, {headers})
-  }
+	return new Response(resMeta.body, { headers });
+};

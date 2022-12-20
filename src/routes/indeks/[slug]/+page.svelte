@@ -4,16 +4,16 @@
 
 	import { Button, Badge } from 'radix-icons-svelte';
 
-	import SEO from "../../../components/seo.svelte";
+	import SEO from '../../../components/seo.svelte';
 
 	/**
 	 * @type {{ judul: string; tagar: string[]; kategori: string[]; content: any; }}
 	 */
-	 export let data;
+	export let data;
 </script>
 
-<SEO 
-	title={data.judul + "- Komputapedia"}
+<SEO
+	title={data.judul + '- Komputapedia'}
 	description={data.judul}
 	article={false}
 	author="Kontributor Komputapedia"
