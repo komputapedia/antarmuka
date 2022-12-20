@@ -79,10 +79,6 @@
 	</Stack>
 </Modal>
 
-<svelte:head>
-	<title>Komputapedia - Ensiklopedia Ilmu Komputasi Berbahasa Indonesia</title>
-</svelte:head>
-
 <SEO 
 	title="Komputapedia - Ensiklopedia Ilmu Komputasi Berbahasa Indonesia"
 	description="Ensiklopedia Ilmu Komputasi Berbahasa Indonesia"
