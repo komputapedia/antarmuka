@@ -42,7 +42,7 @@
 				<Space h={3} />
 				{#if result.length > 0}
 					{#each result as r}
-						<Anchor href={'/indeks/' + r.item.slug}>
+						<Anchor href={'/indeks/' + r.item.slug} override={{"text-decoration": "none"}}>
 							<Text>
 								{r.item.judul}
 							</Text>

@@ -4,12 +4,21 @@
 
 	import { Button, Badge } from 'radix-icons-svelte';
 
-	export let data;
+	import SEO from "../../../components/seo.svelte";
+
+	/**
+	 * @type {{ judul: string; tagar: string[]; kategori: string[]; content: any; }}
+	 */
+	 export let data;
 </script>
 
-<svelte:head>
-	<title> {data.judul} - Komputapedia</title>
-</svelte:head>
+<SEO 
+	title={data.judul + "- Komputapedia"}
+	description={data.judul}
+	article={false}
+	author="Kontributor Komputapedia"
+	keywords={data.tagar}
+/>
 
 <Container>
 	<Grid cols={24}>

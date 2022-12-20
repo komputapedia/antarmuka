@@ -1,10 +1,19 @@
 <script>
 	import { Container, Text, TypographyProvider } from '@svelteuidev/core';
+	import SEO from "../../components/seo.svelte";
 </script>
 
 <svelte:head>
 	<title>Cara Kontribusi - Komputapedia</title>
 </svelte:head>
+
+<SEO 
+	title="Cara Kontribusi - Komputapedia"
+	description="Cara ikut bergotong royong bersama Komputapedia"
+	article={false}
+	author="Komputapedia"
+	keywords={["kontribusi","ensiklopedia"]}
+/>
 
 <Container size="xs">
 	<TypographyProvider>

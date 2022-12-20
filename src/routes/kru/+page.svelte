@@ -14,6 +14,8 @@
 		Anchor
 	} from '@svelteuidev/core';
 
+	import SEO from "../../components/seo.svelte";
+
 	let kru = [
 		{
 			nama: 'Yoghaswara HN',
@@ -25,9 +27,13 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Komputapedia.Kru</title>
-</svelte:head>
+<SEO 
+	title="Komputapedia.Kru"
+	description="Daftar pengurus inti dari komputapedia"
+	article={false}
+	author="Komputapedia"
+	keywords={["kru","ensiklopedia"]}
+/>
 
 <Container size="xs">
 	<TypographyProvider>
