@@ -15,7 +15,7 @@
 <SEO
 	title={data.judul + '- Komputapedia'}
 	description={data.judul}
-	article={false}
+	article={true}
 	author="Kontributor Komputapedia"
 	keywords={data.tagar}
 />

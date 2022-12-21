@@ -7,6 +7,14 @@
 	<title>Arah Langkah - Komputapedia</title>
 </svelte:head>
 
+<SEO
+	title={"Arah Langkah - Komputapedia"}
+	description={"Arah langkah kami"}
+	article={true}
+	author="Kontributor Komputapedia"
+	keywords={["ensiklopedia","arah langkah"]}
+/>
+
 <Container size="xs">
 	<TypographyProvider>
 		<h1>Arah Langkah</h1>

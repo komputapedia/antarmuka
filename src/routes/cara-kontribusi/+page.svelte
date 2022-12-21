@@ -11,7 +11,7 @@
 <SEO
 	title="Cara Kontribusi - Komputapedia"
 	description="Cara ikut bergotong royong bersama Komputapedia"
-	article={false}
+	article={true}
 	author="Komputapedia"
 	keywords={['kontribusi', 'ensiklopedia']}
 />

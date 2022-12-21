@@ -8,8 +8,6 @@ export async function getEncyclopedia() {
 				meta: post.metadata
 			};
 		})
-		// sort by date
-		.sort((a, b) => (a.meta.date < b.meta.date ? 1 : -1));
 
 	return entries;
 }
