@@ -41,7 +41,7 @@
 								>pedia
 							</Text>
 						</Anchor>
-						<Badge color="red" size="sm" radius="sm" variant="dot">Alpha</Badge>
+						<Badge color="blue" size="sm" radius="sm" variant="dot">Beta</Badge>
 					</Group>
 					<Group position="right">
 						<Anchor

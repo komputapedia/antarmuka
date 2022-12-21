@@ -27,11 +27,11 @@
 		},
 		{
 			judul: 'JAM Stack',
-			slug: 'jam stack'
+			slug: 'jam-stack'
 		},
 		{
 			judul: 'SAFE Stack',
-			slug: 'safe stack'
+			slug: 'safe-stack'
 		}
 	];
 
