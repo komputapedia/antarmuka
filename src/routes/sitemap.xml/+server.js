@@ -23,8 +23,8 @@ export const GET = async function get() {
       >
       <url>
       <loc>${website}</loc>
-      <changefreq>daily</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
     </url>
     ${encyclopedias
 			.map(
