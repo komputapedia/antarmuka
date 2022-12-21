@@ -2,7 +2,7 @@
 <script>
 	export let data;
 	import { onMount } from 'svelte';
-	import { Divider, Text, Space, Stack, Container, Anchor } from '@svelteuidev/core';
+	import { Divider, Text, Space, Stack, Container, Anchor, Skeleton} from '@svelteuidev/core';
 	import { searchStorable } from '../../../stores/searchIndex';
 	import Fuse from 'fuse.js';
 
@@ -34,12 +34,24 @@
 
 <Container size="md" py="xl">
 	{#if isLoading}
-		<p>Loading...</p>
+		<Text weight="bold" size="xl">Hasil pencarian dari {data.slug}</Text>
+		<Space h={16} />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Divider />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Divider />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Divider />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Divider />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Divider />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
 	{:else}
 		<section>
 			<Stack>
 				<Text weight="bold" size="xl">Hasil pencarian dari {data.slug}</Text>
-				<Space h={3} />
+				<Space h={16} />
 				{#if result.length > 0}
 					{#each result as r}
 						<Anchor href={'/indeks/' + r.item.slug} override={{ 'text-decoration': 'none' }}>

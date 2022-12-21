@@ -14,10 +14,12 @@
 
 <SEO
 	title={data.judul + '- Komputapedia'}
-	description={data.judul}
+	description={data.deskripsi ? data.deskripsi : data.judul}
 	article={true}
 	author="Kontributor Komputapedia"
 	keywords={data.tagar}
+	follow={true}
+	path={("/indeks/" + data.slug)}
 />
 
 <Container>

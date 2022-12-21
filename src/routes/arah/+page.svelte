@@ -1,6 +1,7 @@
 <!-- SPDX-License-Identifier: GPL-3.0-only -->
 <script>
 	import { Container, Title, Text, TypographyProvider } from '@svelteuidev/core';
+	import SEO from '../../components/seo.svelte';
 </script>
 
 <svelte:head>

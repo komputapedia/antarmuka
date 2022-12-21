@@ -22,7 +22,7 @@
 			bio: 'Seorang pengerajin perangkat lunak, pecatan mahasiswa dan wibu berumur 2x tahun.',
 			role: ['Inisiator'],
 			link: 'https://edelsora.github.io',
-			photo: 'https://avatars.githubusercontent.com/u/100399407?v=4'
+			photo: '/100399407.png'
 		}
 	];
 </script>
@@ -47,16 +47,12 @@
 						<Card shadow="sm">
 							<Card.Section first padding="lg">
 								<Space h="xl" />
-								<Image
+								<img
 									src={k.photo}
 									height={128}
 									width={128}
-									alt="dnogl"
-									radius={10}
-									override={{
-										'justify-content': 'center',
-										display: 'flex'
-									}}
+									alt="yoghaswara"
+									style="border-radius: 10px;justify-content: center;display: flex;margin: .5em auto"
 								/>
 							</Card.Section>
 							<Card.Section>

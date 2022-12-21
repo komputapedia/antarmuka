@@ -9,10 +9,10 @@
 		Stack,
 		Group,
 		Space,
-		Input,
+		TextInput,
 		Image,
 		Divider,
-		InputWrapper,
+		Loader,
 		Modal,
 		useSvelteUITheme
 	} from '@svelteuidev/core';
@@ -24,10 +24,20 @@
 		{
 			judul: 'Algoritme',
 			slug: 'algoritme'
+		},
+		{
+			judul: 'JAM Stack',
+			slug: 'jam stack'
+		},
+		{
+			judul: 'SAFE Stack',
+			slug: 'safe stack'
 		}
 	];
 
 	let searchField = '';
+
+	let invalidSearchField = false;
 
 	let openContribGuide = false;
 
@@ -106,14 +116,17 @@
 					Ensiklopedia Ilmu Komputasi
 					<br /> Terbuka Bahasa Indonesia
 				</Text>
-				<Container override size="xs">
+				<Container size="xs">
 					<Text
 						weight="semibold"
 						size="md"
 						variant="text"
 						align="center"
-						color="gray"
 						inline={false}
+						override={{
+							"color": "var(--svelteui-colors-gray700)"
+						}}
+
 					>
 						Sebuah inisiatif untuk menyediakan ensiklopedia ilmu komputasi berbahasa Indonesia yang
 						terbuka dan gotong royong.
@@ -125,18 +138,37 @@
 						switch (e.key) {
 							case 'Enter':
 								e.preventDefault();
-								goto('/cari/' + searchField);
+								if(searchField.length == 0){
+									invalidSearchField = true;
+								}else{
+									invalidSearchField = false;
+									searching = true;
+									goto('/cari/' + searchField);
+								}
+								break;
+							default:
+								invalidSearchField = false;
 								break;
 						}
 					}}
 				>
-					<InputWrapper label="">
-						<Input
-							bind:value={searchField}
-							size="xs"
-							placeholder="Cari apa yacc ... (e.g Algoritme Quicksort, Kalkulus Lambda)"
-						/>
-					</InputWrapper>
+					<TextInput
+						id="searchBar"
+						bind:value={searchField}
+						size="sm"
+						override={{
+							"font-size": "1em"
+						}}
+						placeholder="Cari apa yacc ... (e.g Algoritme Quicksort, Kalkulus Lambda)"
+						error={invalidSearchField ? "Isi dulu bosquuu" : ""}
+						root="input"
+					>
+						<svelte:fragment slot='rightSection'>
+							{#if searching}
+								<Loader color='blue' size='xs' />
+							{/if}
+						</svelte:fragment>	
+					</TextInput>
 				</section>
 				<Group align="center" override={{ 'justify-content': 'center' }}>
 					<Button
@@ -147,8 +179,13 @@
 						ripple={true}
 						loading={searching}
 						on:click={() => {
-							searching = true;
-							goto('/cari/' + searchField);
+							if(searchField.length == 0){
+								invalidSearchField = true;
+							}else{
+								invalidSearchField = false;
+								searching = true;
+								goto('/cari/' + searchField);								
+							}
 						}}
 					>
 						<MagnifyingGlass size={16} slot="leftIcon" />
@@ -211,7 +248,7 @@
 			<Group>
 				{#each contributorList as contributor}
 					<Anchor href={contributor.profile}>
-						<Image src={contributor.avatar} width={50} radius="sm" />
+						<img src={contributor.avatar} width="50" style="border-radius: 100%" defer alt={contributor.login} />
 					</Anchor>
 				{/each}
 			</Group>
