@@ -124,9 +124,8 @@
 						align="center"
 						inline={false}
 						override={{
-							"color": "var(--svelteui-colors-gray700)"
+							color: 'var(--svelteui-colors-gray700)'
 						}}
-
 					>
 						Sebuah inisiatif untuk menyediakan ensiklopedia ilmu komputasi berbahasa Indonesia yang
 						terbuka dan gotong royong.
@@ -138,9 +137,9 @@
 						switch (e.key) {
 							case 'Enter':
 								e.preventDefault();
-								if(searchField.length == 0){
+								if (searchField.length == 0) {
 									invalidSearchField = true;
-								}else{
+								} else {
 									invalidSearchField = false;
 									searching = true;
 									goto('/cari/' + searchField);
@@ -157,17 +156,17 @@
 						bind:value={searchField}
 						size="sm"
 						override={{
-							"font-size": "1em"
+							'font-size': '1em'
 						}}
 						placeholder="Cari apa yacc ... (e.g Algoritme Quicksort, Kalkulus Lambda)"
-						error={invalidSearchField ? "Isi dulu bosquuu" : ""}
+						error={invalidSearchField ? 'Isi dulu bosquuu' : ''}
 						root="input"
 					>
-						<svelte:fragment slot='rightSection'>
+						<svelte:fragment slot="rightSection">
 							{#if searching}
-								<Loader color='blue' size='xs' />
+								<Loader color="blue" size="xs" />
 							{/if}
-						</svelte:fragment>	
+						</svelte:fragment>
 					</TextInput>
 				</section>
 				<Group align="center" override={{ 'justify-content': 'center' }}>
@@ -179,12 +178,12 @@
 						ripple={true}
 						loading={searching}
 						on:click={() => {
-							if(searchField.length == 0){
+							if (searchField.length == 0) {
 								invalidSearchField = true;
-							}else{
+							} else {
 								invalidSearchField = false;
 								searching = true;
-								goto('/cari/' + searchField);								
+								goto('/cari/' + searchField);
 							}
 						}}
 					>
@@ -248,7 +247,13 @@
 			<Group>
 				{#each contributorList as contributor}
 					<Anchor href={contributor.profile}>
-						<img src={contributor.avatar} width="50" style="border-radius: 100%" defer alt={contributor.login} />
+						<img
+							src={contributor.avatar}
+							width="50"
+							style="border-radius: 100%"
+							defer
+							alt={contributor.login}
+						/>
 					</Anchor>
 				{/each}
 			</Group>

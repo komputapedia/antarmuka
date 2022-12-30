@@ -12,15 +12,6 @@
 	export let data;
 </script>
 
-<style>
-	@import url('/prism-light.css');
-	.ensiklopedia h1,
-	h2,
-	h3 {
-		font-family: 'Space Grotesk', sans-serif;
-	}
-</style>
-
 <SEO
 	title={data.judul + '- Komputapedia'}
 	description={data.deskripsi ? data.deskripsi : data.judul}
@@ -28,7 +19,7 @@
 	author="Kontributor Komputapedia"
 	keywords={data.tagar}
 	follow={true}
-	path={("/indeks/" + data.slug)}
+	path={'/indeks/' + data.slug}
 />
 
 <Container>
@@ -73,3 +64,11 @@
 	</Grid>
 </Container>
 
+<style>
+	@import url('prism-light.css');
+	.ensiklopedia h1,
+	h2,
+	h3 {
+		font-family: 'Space Grotesk', sans-serif;
+	}
+</style>

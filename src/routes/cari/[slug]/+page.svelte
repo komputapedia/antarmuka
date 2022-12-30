@@ -2,7 +2,7 @@
 <script>
 	export let data;
 	import { onMount } from 'svelte';
-	import { Divider, Text, Space, Stack, Container, Anchor, Skeleton} from '@svelteuidev/core';
+	import { Divider, Text, Space, Stack, Container, Anchor, Skeleton } from '@svelteuidev/core';
 	import { searchStorable } from '../../../stores/searchIndex';
 	import Fuse from 'fuse.js';
 
@@ -36,17 +36,17 @@
 	{#if isLoading}
 		<Text weight="bold" size="xl">Hasil pencarian dari {data.slug}</Text>
 		<Space h={16} />
-		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }} />
 		<Divider />
-		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }} />
 		<Divider />
-		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }} />
 		<Divider />
-		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }} />
 		<Divider />
-		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }} />
 		<Divider />
-		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }}   />
+		<Skeleton height={12} radius="xl" override={{ marginTop: '8px' }} />
 	{:else}
 		<section>
 			<Stack>

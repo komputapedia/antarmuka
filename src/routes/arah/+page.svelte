@@ -9,11 +9,11 @@
 </svelte:head>
 
 <SEO
-	title={"Arah Langkah - Komputapedia"}
-	description={"Arah langkah kami"}
+	title={'Arah Langkah - Komputapedia'}
+	description={'Arah langkah kami'}
 	article={true}
 	author="Kontributor Komputapedia"
-	keywords={["ensiklopedia","arah langkah"]}
+	keywords={['ensiklopedia', 'arah langkah']}
 />
 
 <Container size="xs">
