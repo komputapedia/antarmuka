@@ -8,7 +8,7 @@ export const GET = async function get() {
 	};
 
 	const encyclopedias = await getEncyclopedia();
-	const website = 'https://komputapedia.web.id';
+	const website = 'https://www.komputapedia.web.id';
 
 	let resMeta = {
 		headers,

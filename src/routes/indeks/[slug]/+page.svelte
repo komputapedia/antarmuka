@@ -12,6 +12,15 @@
 	export let data;
 </script>
 
+<style>
+	@import url('/prism-light.css');
+	.ensiklopedia h1,
+	h2,
+	h3 {
+		font-family: 'Space Grotesk', sans-serif;
+	}
+</style>
+
 <SEO
 	title={data.judul + '- Komputapedia'}
 	description={data.deskripsi ? data.deskripsi : data.judul}
@@ -64,10 +73,3 @@
 	</Grid>
 </Container>
 
-<style>
-	.ensiklopedia h1,
-	h2,
-	h3 {
-		font-family: 'Space Grotesk', sans-serif;
-	}
-</style>
