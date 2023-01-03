@@ -7,6 +7,8 @@ Status: Pengembangan Awal
 Sebuah inisiatif untuk menyediakan ensiklopedia ilmu komputasi berbahasa Indonesia yang terbuka dan gotong royong.
 Proyek ini bertujuan untuk mendemokratisasi wawasan dan menyusun bacaan umum tentang ilmu komputasi.
 
+[![powered by vercel](docs/1618983297-powered-by-vercel.svg)](https://vercel.com/?utm_source=komputapedia&utm_campaign=oss)
+
 ## 🚀 Cara menjalankan kode ini
 
 Kode ini sebagian besar didominasi oleh bahasa Svelte yang bergantung pada ekosistem javascript, maka perlu menginstall

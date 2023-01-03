@@ -9,7 +9,9 @@
 		Group,
 		Anchor,
 		Badge,
-		Divider
+		Divider,
+		Stack,
+		Center
 	} from '@svelteuidev/core';
 
 	import { GithubLogo } from 'radix-icons-svelte';
@@ -73,13 +75,22 @@
 		<slot />
 		<Container>
 			<Divider />
-			<Group>
-				<Anchor
-					color="dark"
-					href="/penafian"
-					override={{ 'text-decoration': 'none', margin: 'auto' }}>Penafian</Anchor
-				>
-			</Group>
+			<Stack>
+				<Group>
+					<Anchor
+						color="dark"
+						href="/penafian"
+						override={{ 'text-decoration': 'none', margin: 'auto' }}>Penafian</Anchor
+					>
+				</Group>
+				<Group override={{"display": "flex"}}>
+					<Center override={{"margin": "auto"}}>
+						<a href="https://vercel.com/?utm_source=komputapedia&utm_campaign=oss">
+							<img src="/1618983297-powered-by-vercel.svg" alt="powered by vercel" /> 
+						</a>
+					</Center>
+				</Group>
+			</Stack>
 		</Container>
 	</AppShell>
 </SvelteUIProvider>
