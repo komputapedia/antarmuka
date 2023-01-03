@@ -22,6 +22,15 @@
 	path={'/indeks/' + data.slug}
 />
 
+<style global>
+	@import url('prism-light.css');
+	.ensiklopedia h1,
+	h2,
+	h3 {
+		font-family: 'Space Grotesk', sans-serif;
+	}
+</style>
+
 <Container>
 	<Grid cols={24}>
 		<Grid.Col sm={16} xs={24}>
@@ -64,11 +73,3 @@
 	</Grid>
 </Container>
 
-<style>
-	@import url('prism-light.css');
-	.ensiklopedia h1,
-	h2,
-	h3 {
-		font-family: 'Space Grotesk', sans-serif;
-	}
-</style>

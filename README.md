@@ -15,6 +15,7 @@ runtime javascript seperti Git, Node JS dan install paket manajer pnpm.
 1. Klon repositori ini dengan perintah berikut: `git clone --recurse-submodules https://github.com/komputapedia/antarmuka`
 2. Lalu jalankan perintah `pnpm install` pada konsole yang berlokasi didalam folder hasil klon.
 3. Setelah pemasangan ketergantungan selesai, jalankan `pnpm dev` untuk menjalankan situs dalam mode pengembang.
+4. Jika kamu ingin berkontribusi pastikan apa yang kamu bikin, di test dengan *preview production* (`pnpm build && pnpm preview`).
 
 ### Pembaharuan Ensiklopedia
 
