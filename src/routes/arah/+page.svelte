@@ -46,7 +46,7 @@
 
 		<p>
 			Arah ini bukan sebuah ambisi, motivasi ataupun gengsi, tetapi sebuah inisiatif tanpa harapan
-			untuk berbagi kepada sesama dan bebahagia hati dengan sukarela.
+			untuk berbagi kepada sesama dan sukarela untuk kebahagian bersama.
 		</p>
 
 		Salam,

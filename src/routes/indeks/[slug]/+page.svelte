@@ -1,22 +1,10 @@
 <!-- SPDX-License-Identifier: GPL-3.0-only -->
 <script>
-	import { TypographyProvider, Container, Paper, Text, Grid, Kbd, Group } from '@svelteuidev/core';
+	import { Container, Paper, Text, Grid, Kbd, Group } from '@svelteuidev/core';
 
 	import { Button, Badge } from 'radix-icons-svelte';
 
 	import SEO from '../../../components/seo.svelte';
-
-	import { createStyles } from '@svelteuidev/core';
-
-let condition = false;
-
-const useStyles = createStyles((theme) => ({
-	code: {display: "inherit"},
-	pre: {display: "inherit"}
-}));
-
-	$: ({ getStyles } = useStyles());
-
 	/**
 	 * @type {{ judul: string; tagar: string[]; kategori: string[]; content: any; }}
 	 */
@@ -61,6 +49,11 @@ const useStyles = createStyles((theme) => ({
 
 	.ensiklopedia li {
 		margin-top: 10px;
+	}
+
+	.ensiklopedia img {
+		max-width: 40em;
+		width: 100%;
 	}
 
 	.ensiklopedia p {

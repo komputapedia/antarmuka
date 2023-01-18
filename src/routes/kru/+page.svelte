@@ -22,7 +22,7 @@
 			bio: 'Seorang pengerajin perangkat lunak, pecatan mahasiswa dan wibu berumur 2x tahun.',
 			role: ['Inisiator'],
 			link: 'https://edelsora.github.io',
-			photo: '/100399407.png'
+			photo: 'https://avatars.githubusercontent.com/u/100399407?v=4'
 		}
 	];
 </script>
