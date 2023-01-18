@@ -6,6 +6,17 @@
 
 	import SEO from '../../../components/seo.svelte';
 
+	import { createStyles } from '@svelteuidev/core';
+
+let condition = false;
+
+const useStyles = createStyles((theme) => ({
+	code: {display: "inherit"},
+	pre: {display: "inherit"}
+}));
+
+	$: ({ getStyles } = useStyles());
+
 	/**
 	 * @type {{ judul: string; tagar: string[]; kategori: string[]; content: any; }}
 	 */
@@ -23,22 +34,53 @@
 />
 
 <style global>
-	@import url('prism-light.css');
-	.ensiklopedia h1,
+	
+	h1,
 	h2,
 	h3 {
 		font-family: 'Space Grotesk', sans-serif;
 	}
+
+	.ensiklopedia h1 {
+		font-weight: 700;
+		margin-top: 31.2px;
+		margin-bottom: 12px;
+		font-size: 34px;
+		line-height: 1.3;
+	}
+
+	.ensiklopedia {
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	}
+
+	.ensiklopedia a {
+		color: rgb(34, 139, 230);
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+		text-decoration-line: none;
+	}
+
+	.ensiklopedia li {
+		margin-top: 10px;
+	}
+
+	.ensiklopedia p {
+		font-family: "Segoe UI", sans-serif;
+		line-height: 1.5;
+		font-size: 16px;
+	}
+
 </style>
 
 <Container>
 	<Grid cols={24}>
 		<Grid.Col sm={16} xs={24}>
-			<TypographyProvider className="ensiklopedia">
+			 <!-- <TypographyProvider class={getStyles()} >-->
+			<section class="ensiklopedia">
 				<h1>{data.judul}</h1>
 				<!-- <p>Published: {data.date}</p> -->
 				<svelte:component this={data.content} />
-			</TypographyProvider>
+			</section>
+			<!-- </TypographyProvider> -->
 		</Grid.Col>
 		<Grid.Col sm={8} xs={24}>
 			<Container>

@@ -95,5 +95,6 @@
 	</AppShell>
 </SvelteUIProvider>
 
-<style>
+<style global>
+	@import url('prism-light.css');
 </style>
