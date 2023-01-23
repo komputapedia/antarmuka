@@ -34,6 +34,7 @@ export const GET = async function get() {
       <loc>${website}/indeks/${post.slug}</loc>
       <changefreq>daily</changefreq>
       <priority>0.7</priority>
+      <lastmod>${post.metadata.tanggal_pembaharuan}</lastmod>
     </url>
     `
 			)
