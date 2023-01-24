@@ -1,10 +1,17 @@
 <!-- SPDX-License-Identifier: GPL-3.0-only -->
 <script>
-	import { Container, Paper, Text, Grid, Kbd, Group } from '@svelteuidev/core';
+	import { goto } from '$app/navigation';
+	import { Container, Paper, Text, Grid, Kbd, Group, TextInput, Loader, MediaQuery, Divider } from '@svelteuidev/core';
 
 	import { Button, Badge } from 'radix-icons-svelte';
 
 	import SEO from '../../../components/seo.svelte';
+
+	let searchField = '';
+
+	let invalidSearchField = false;
+	
+	let searching = false;
 	/**
 	 * @type {{ judul: string; tagar: string[]; kategori: string[]; content: any; }}
 	 */
@@ -31,7 +38,7 @@
 
 	.ensiklopedia h1 {
 		font-weight: 700;
-		margin-top: 31.2px;
+		margin-top: 12px;
 		margin-bottom: 12px;
 		font-size: 34px;
 		line-height: 1.3;
@@ -64,10 +71,50 @@
 
 </style>
 
-<Container>
+<Container py="xl" px="sm">
 	<Grid cols={24}>
 		<Grid.Col sm={16} xs={24}>
 			 <!-- <TypographyProvider class={getStyles()} >-->
+				<MediaQuery largerThan="md" styles={{"display": "none"}}>
+					<section
+						on:keydown={(e) => {
+							switch (e.key) {
+								case 'Enter':
+									e.preventDefault();
+									if (searchField.length == 0) {
+										invalidSearchField = true;
+									} else {
+										invalidSearchField = false;
+										searching = true;
+										goto('/cari/' + searchField);
+									}
+									break;
+								default:
+									invalidSearchField = false;
+									break;
+							}
+						}}
+					>
+						<TextInput
+							id="searchBar"
+							bind:value={searchField}
+							size="sm"
+							override={{
+								'font-size': '1em'
+							}}
+							placeholder="Cari..."
+							error={invalidSearchField ? 'Isi dulu bosquuu' : ''}
+							root="input"
+						>
+							<svelte:fragment slot="rightSection">
+								{#if searching}
+									<Loader color="blue" size="xs" />
+								{/if}
+							</svelte:fragment>
+						</TextInput>
+						<Divider />
+					</section>
+				</MediaQuery>
 			<section class="ensiklopedia">
 				<h1>{data.judul}</h1>
 				<!-- <p>Published: {data.date}</p> -->
@@ -79,6 +126,45 @@
 			<Container>
 				<Paper>
 					<Grid>
+						<Grid.Col>
+							<section
+									on:keydown={(e) => {
+										switch (e.key) {
+											case 'Enter':
+												e.preventDefault();
+												if (searchField.length == 0) {
+													invalidSearchField = true;
+												} else {
+													invalidSearchField = false;
+													searching = true;
+													goto('/cari/' + searchField);
+												}
+												break;
+											default:
+												invalidSearchField = false;
+												break;
+										}
+									}}
+								>
+									<TextInput
+										id="searchBar"
+										bind:value={searchField}
+										size="sm"
+										override={{
+											'font-size': '1em'
+										}}
+										placeholder="Cari..."
+										error={invalidSearchField ? 'Isi dulu bosquuu' : ''}
+										root="input"
+									>
+										<svelte:fragment slot="rightSection">
+											{#if searching}
+												<Loader color="blue" size="xs" />
+											{/if}
+										</svelte:fragment>
+									</TextInput>
+								</section>
+						</Grid.Col>
 						<Grid.Col>
 							<Text>
 								<Button />
