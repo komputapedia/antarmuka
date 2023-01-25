@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: GPL-3.0-only -->
 <script>
 	import { goto } from '$app/navigation';
-	import { Container, Paper, Text, Grid, Kbd, Group, TextInput, Loader, MediaQuery, Divider } from '@svelteuidev/core';
+	import { Container, Paper, Text, Grid, Kbd, Group, TextInput, Loader, MediaQuery, Divider,Anchor } from '@svelteuidev/core';
 
-	import { Button, Badge } from 'radix-icons-svelte';
+	import { Button, Badge, Pencil1 } from 'radix-icons-svelte';
 
 	import SEO from '../../../components/seo.svelte';
 
@@ -13,7 +13,7 @@
 	
 	let searching = false;
 	/**
-	 * @type {{ judul: string; tagar: string[]; kategori: string[]; content: any; }}
+	 * @type {{ judul: string; tagar: string[]; kategori: string[]; content: any; slug: string }}
 	 */
 	export let data;
 </script>
@@ -186,6 +186,19 @@
 									{/each}
 								</ul>
 							</Text>
+						</Grid.Col>
+						<Grid.Col>
+							<Anchor 
+								href={"https://github.com/komputapedia/ensiklopedia/blob/main/" + data.slug + "/index.md" }
+								alt="repository github"
+								override={{ 'text-decoration': 'none !important' }}
+							>
+								
+								<Text>
+									<Pencil1 />
+									Isi kurang tepat? Sunting disini
+								</Text>
+							</Anchor>
 						</Grid.Col>
 					</Grid>
 				</Paper>
